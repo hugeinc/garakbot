@@ -66,15 +66,16 @@ BOT_ASYNC = True
 # The identity, or credentials, used to connect to a server
 BOT_IDENTITY = {
     # XMPP (Jabber) mode
-    'username': 'err@localhost',  # The JID of the user you have created for the bot
-    'password': 'changeme',       # The corresponding password for this user
+    #'username': '55302_1824349@chat.hipchat.com',  # The JID of the user you have created for the bot
+    #'password': 'Kvwn99YFeKHreE',       # The corresponding password for this user
 
     ## HipChat mode (Comment the above if using this mode)
-    # 'username' : '12345_123456@chat.hipchat.com',
-    # 'password' : 'changeme',
+     'username' : '55302_1824349@chat.hipchat.com',
+     'password' : 'Kvwn99YFeKHreE',
+
     ## Group admins can create/view tokens on the settings page after logging
     ## in on HipChat's website
-    # 'token' : 'ed4b74d62833267d98aa99f312ff04',
+     'token' : '7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK',
 
     ## Campfire mode (Comment the others above if using this mode)
     # 'subdomain': 'yatta',
@@ -96,20 +97,20 @@ BOT_IDENTITY = {
 # Note: With campfire this should be the full name of a person, like so: 
 # BOT_ADMINS = ('Guillaume Binet',)
 #
-BOT_ADMINS = ('gbin@localhost',)
+BOT_ADMINS = ('55302_770177@chat.hipchat.com',)
 
 # Chatrooms your bot should join on startup. For the IRC backend you 
 # should include the # sign here. For XMPP rooms that are password
 # protected, you can specify another tuple here instead of a string,
 # using the format (RoomName, Password).
-CHATROOM_PRESENCE = ('err@conference.server.tld',)
+CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com',)
 
 # The FullName, or nickname, your bot should use. What you set here will
 # be the nickname that Err shows in chatrooms. Note that some XMPP
 # implementations, notably HipChat, are very picky about what name you
 # use. In the case of HipChat, make sure this matches exactly with the
 # name you gave the user.
-CHATROOM_FN = 'Err'
+CHATROOM_FN = 'Garak Bot'
 
 ##########################################################################
 # Prefix configuration                                                   #
@@ -122,7 +123,7 @@ CHATROOM_FN = 'Err'
 # If the prefix is changed from the default, the help strings will be
 # automatically adjusted for you.
 #
-BOT_PREFIX = '!'
+BOT_PREFIX = '/garak'
 
 # Uncomment the following and set it to True if you want the prefix to be
 # optional for normal chat.
@@ -148,7 +149,7 @@ BOT_PREFIX = '!'
 # Continuing on this theme, you might want to permit your users to be
 # lazy and not require correct capitalization, so they can do 'Err',
 # 'err' or even 'ERR'.
-#BOT_ALT_PREFIX_CASEINSENSITIVE = True
+BOT_ALT_PREFIX_CASEINSENSITIVE = True
 
 ##########################################################################
 # Access controls and message diversion                                  #
@@ -215,7 +216,7 @@ REVERSE_CHATROOM_RELAY = {}
 # change this depending on your environment. Setting this to None disables
 # certificate validation, which can be useful if you have a self-signed
 # certificate for example.
-#XMPP_CA_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
+XMPP_CA_CERT_FILE = None #"/etc/ssl/certs/ca-certificates.crt"
 
 # Influence the security methods used on connection with XMPP-based
 # backends. You can use this to work around authentication issues with

@@ -1,1 +1,14 @@
+ERR Command
 /Users/ibelle/.virtualenvs/garak/bin/err.py
+
+Credentials
+Email: ibelle+garak@hugeinc.com
+Password: Kvwn99YFeKHreE
+
+Username	55302_1824349
+Jabber ID	55302_1824349@chat.hipchat.com
+Room nickname	Garak Bot
+Connect host	chat.hipchat.com
+Connect port	5222 (TLS) or 5223 (Legacy SSL)
+Conference (MUC) domain	conf.hipchat.com
+API TOKEN: 7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK

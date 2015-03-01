@@ -13,4 +13,4 @@ def start_err(dameon=None):
     if not dameon:
         dameon=''
 
-    local("err.py -c data/  %s" % dameon)
+    local("err.py -c data/  -H %s" % dameon)
