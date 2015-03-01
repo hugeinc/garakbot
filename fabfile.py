@@ -9,8 +9,9 @@ venv_path = os.environ['VIRTUAL_ENV']
 env.user = os.environ['USER']
 env.sudo_user = env.user
 
-def start_err(dameon=None):
-    if not dameon:
-        dameon=''
+def start_err(daemon=None):
+    cmd_str = "err.py -c data/ "
+    if daemon:
+       cmd_str = cmd_str + ' -d'
 
-    local("err.py -c data/  -H %s" % dameon)
+    local(cmd_str)
