@@ -33,7 +33,7 @@ BOT_DATA_DIR = '%s/lib/err' % GARAK_BASE
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = None 
+BOT_EXTRA_PLUGIN_DIR = '../plugins'
 
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
@@ -176,7 +176,7 @@ BOT_ALT_PREFIX_CASEINSENSITIVE = True
 
 # Uncomment and set this to True to hide the restricted commands from
 # the help output.
-#HIDE_RESTRICTED_COMMANDS = False
+#HIDE_RESTRICTED_COMMANDS = True
 
 # Uncomment and set this to True to ignore commands from users that have no
 # access for these instead of replying with error message.

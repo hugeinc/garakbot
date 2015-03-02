@@ -11,4 +11,8 @@ Room nickname	Garak Bot
 Connect host	chat.hipchat.com
 Connect port	5222 (TLS) or 5223 (Legacy SSL)
 Conference (MUC) domain	conf.hipchat.com
-API TOKEN: 7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK
+API TOKEN:
+
+FOR DEV
+brew install qt
+

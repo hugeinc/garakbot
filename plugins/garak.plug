@@ -1,0 +1,9 @@
+[Core]
+Name = GarakBot
+Module = garak
+
+[Documentation]
+Description = Garak Obsidian Order Bot
+
+[Python]
+Version = 2+
