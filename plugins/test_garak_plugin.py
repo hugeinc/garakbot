@@ -10,7 +10,7 @@ from errbot.plugin_manager import get_plugin_obj_by_name
 class TestGarakPlugin(object):
     extra_plugin_dir = '.'
 
-    def test_plugin_methods(self, testbot):
+    def test_plugin_has_methods(self, testbot):
         p = get_plugin_obj_by_name('GarakBot')
         assert p is not None
 
@@ -18,15 +18,15 @@ class TestGarakPlugin(object):
         assert hasattr(p, 'number44')
         assert hasattr(p, 'spock')
 
-    def test_mycommand_hello(self, testbot):
+    def test_mycommand_hello_returns_correct_output(self, testbot):
         push_message('! hello')
         assert "Hello. You're a killer, admit it. We both are.However, I'm also a very *good* tailor." in pop_message()
 
-    def test_mycommand_number44(self, testbot):
+    def test_mycommand_number44_returns_correct_output(self, testbot):
         push_message('! number44')
         assert "WHOOOO! 44 THAT'S ME!! GETTING SOME COLD CUTS TODAY!!" in pop_message()
 
-    def test_mycommand_spock(self, testbot):
+    def test_mycommand_spock_returns_correct_output(self, testbot):
         push_message('! spock')
         assert "Live Long and Prosper. - R.I.P Mr. Spock" in pop_message()
 

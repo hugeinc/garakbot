@@ -1,8 +1,14 @@
 from errbot import BotPlugin, botcmd
 
+
 class GarakBot(BotPlugin):
     """
     Obsidian Order Chat Robot
+    Store items transparently via mixin:
+    self[title] = poll
+    del self[title]
+    List items:
+    self.keys()
     """
     @botcmd
     def hello(self, msg, args):
