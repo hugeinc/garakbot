@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2585ca35-0cc4-4997-bb5b-7f1d9ea4eac8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/config.py" afterPath="$PROJECT_DIR$/data/config.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/garak.py" afterPath="$PROJECT_DIR$/plugins/garak.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/test_garak_plugin.py" afterPath="$PROJECT_DIR$/plugins/test_garak_plugin.py" />
     </list>
     <ignored path="garak.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,10 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.886646" vertical-offset="41" max-vertical-offset="4335">
+            <state vertical-scroll-proportion="-21.148148" vertical-offset="41" max-vertical-offset="4335">
               <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
               <folding>
                 <element signature="e#1276#1290#0" expanded="true" />
@@ -67,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/plugins/test_garak_plugin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+              <caret line="22" column="79" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="79" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -75,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="garak.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="garak.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/garak.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.22801788" vertical-offset="0" max-vertical-offset="671">
+              <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -108,9 +106,9 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/data/__init__.py" />
         <option value="$PROJECT_DIR$/plugins/garak.plug" />
-        <option value="$PROJECT_DIR$/plugins/garak.py" />
         <option value="$PROJECT_DIR$/plugins/test_garak_plugin.py" />
         <option value="$PROJECT_DIR$/data/config.py" />
+        <option value="$PROJECT_DIR$/plugins/garak.py" />
       </list>
     </option>
   </component>
@@ -519,14 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/garak.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/garak/lib/python3.4/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="10659">
@@ -535,23 +525,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.148148" vertical-offset="41" max-vertical-offset="4335">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="e#1276#1290#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/test_garak_plugin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+          <caret line="22" column="79" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="79" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.py">
+    <entry file="file://$PROJECT_DIR$/plugins/garak.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.886646" vertical-offset="41" max-vertical-offset="4335">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="e#1276#1290#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.22801788" vertical-offset="0" max-vertical-offset="671">
+          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>

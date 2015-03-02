@@ -7,7 +7,7 @@ class GarakBot(BotPlugin):
     @botcmd
     def hello(self, msg, args):
         """Say hello to the world"""
-        return "Hello. You're a killer, admit it. We both are.However, I'm a very *good* tailor."
+        return "Hello. You're a killer, admit it. We both are.However, I'm also a very *good* tailor."
 
     @botcmd
     def number44(self,msg,args):
