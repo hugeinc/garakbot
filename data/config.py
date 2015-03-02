@@ -33,7 +33,9 @@ BOT_DATA_DIR = '%s/lib/err' % GARAK_BASE
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = '../plugins'
+BOT_EXTRA_PLUGIN_DIR = '/Users/ibelle/Dev/projects/personal/theorder/garak/plugins'
+#TODO: MAKE THIS PATH PYTHONIC
+#os.path.abspath(os.pardir + os.sep + 'plugins')
 
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
