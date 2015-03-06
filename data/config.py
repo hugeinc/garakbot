@@ -19,7 +19,9 @@
 import logging
 import os
 
-GARAK_BASE=os.path.abspath(os.path.dirname(__file__))
+GARAK_BASE = os.path.abspath(os.path.dirname(__file__))
+GARAK_QUOTE_DATA = os.path.abspath(GARAK_BASE+os.sep+'json'+os.sep+'garak_quote.json')
+print(GARAK_QUOTE_DATA)
 ##########################################################################
 # Core Err configuration                                                 #
 ##########################################################################
@@ -33,9 +35,7 @@ BOT_DATA_DIR = '%s/lib/err' % GARAK_BASE
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = '/Users/ibelle/Dev/projects/personal/theorder/garak/plugins'
-#TODO: MAKE THIS PATH PYTHONIC
-#os.path.abspath(os.pardir + os.sep + 'plugins')
+BOT_EXTRA_PLUGIN_DIR = os.path.abspath(os.pardir + os.sep + 'garak' + os.sep + 'plugins')
 
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
@@ -67,9 +67,6 @@ BOT_ASYNC = True
 
 # The identity, or credentials, used to connect to a server
 BOT_IDENTITY = {
-    # XMPP (Jabber) mode
-    #'username': '55302_1824349@chat.hipchat.com',  # The JID of the user you have created for the bot
-    #'password': 'Kvwn99YFeKHreE',       # The corresponding password for this user
 
     ## HipChat mode (Comment the above if using this mode)
      'username' : '55302_1824349@chat.hipchat.com',
@@ -78,19 +75,6 @@ BOT_IDENTITY = {
     ## Group admins can create/view tokens on the settings page after logging
     ## in on HipChat's website
      'token' : '7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK',
-
-    ## Campfire mode (Comment the others above if using this mode)
-    # 'subdomain': 'yatta',
-    # 'username' : 'errbot',
-    # 'password' : 'changeme',
-
-    ## IRC mode (Comment the others above if using this mode)
-    # 'nickname' : 'err-chatbot',
-    # 'username' : 'err-chatbot',    # optional, defaults to nickname if omitted
-    # 'password' : None,             # optional
-    # 'server' : 'irc.freenode.net',
-    # 'port': 6667,                  # optional
-    # 'ssl': False,                  # optional
 }
 
 # Set the admins of your bot. Only these users will have access
