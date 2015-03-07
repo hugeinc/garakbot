@@ -20,8 +20,7 @@ import logging
 import os
 
 GARAK_BASE = os.path.abspath(os.path.dirname(__file__))
-GARAK_QUOTE_DATA = os.path.abspath(GARAK_BASE+os.sep+'json'+os.sep+'garak_quote.json')
-print(GARAK_QUOTE_DATA)
+
 ##########################################################################
 # Core Err configuration                                                 #
 ##########################################################################
@@ -29,6 +28,9 @@ print(GARAK_QUOTE_DATA)
 # The location where all of Err's data should be stored. Make sure to set
 # this to a directory that is writable by the user running the bot.
 BOT_DATA_DIR = '%s/lib/err' % GARAK_BASE
+
+GARAK_QUOTE_DATA = os.path.abspath(BOT_DATA_DIR+os.sep+'json'+os.sep+'garak_quote.json')
+
 
 # Set this to a directory on your system where you want to load extra
 # plugins from, which is useful mostly if you want to develop a plugin
