@@ -1,10 +1,9 @@
-import logging
 from errbot import BotPlugin, botcmd
 import os, json
 from random import choice
 from io import StringIO
 from config import GARAK_QUOTE_DATA
-
+import logging
 
 class GarakBot(BotPlugin):
     """
@@ -39,26 +38,35 @@ class GarakBot(BotPlugin):
         if quote_store is None:
             return {"quote":"I'm Sorry, I have nothing to say. For now.", "attr":"Garak"}
         newquote = choice(quote_store)
-        while self.last_garak_quote == newquote:
+
+        while self.last_garak_quote == newquote and len(quote_store) > 1:
             newquote = choice(quote_store)
         self.last_garak_quote = newquote
         return newquote
 
     def get_garak_quote_datasource(self):
         if not 'garak_quotes' in self or self['garak_quotes'] is None:
-           self['garak_quotes'] = self.load_data_sources()
+            self['garak_quotes'] = self.load_data_sources()
         return self['garak_quotes']
+
+    def clear_garak_quote_datasource(self):
+        try:
+            del self['garak_quotes']
+        except (KeyError, AttributeError):
+            logging.error("Error Clearing Quote Data from shelf")
 
     def load_data_sources(self):
         if type(self.garak_quote_ds) == StringIO:
             try:
                 return json.load(self.garak_quote_ds)
             except (IOError, ValueError):
-                pass
+                logging.error("Error Loading JSON value form StringIO")
+
         if type(self.garak_quote_ds) == str:
             try:
                 return json.load(open(self.garak_quote_ds))
             except (IOError, ValueError):
-                pass
+                logging.error("Error Loading JSON value form file")
+
         return None
 
