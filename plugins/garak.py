@@ -61,12 +61,10 @@ class GarakBot(BotPlugin):
                 return json.load(self.garak_quote_ds)
             except (IOError, ValueError):
                 logging.error("Error Loading JSON value form StringIO")
-
         if type(self.garak_quote_ds) == str:
             try:
                 return json.load(open(self.garak_quote_ds))
             except (IOError, ValueError):
                 logging.error("Error Loading JSON value form file")
-
         return None
 
