@@ -116,13 +116,13 @@ BOT_PREFIX = '/garak'
 # Uncomment the following and set it to True if you want the prefix to be
 # optional for normal chat.
 # (Meaning messages sent directly to the bot as opposed to within a MUC)
-#BOT_PREFIX_OPTIONAL_ON_CHAT = False
+BOT_PREFIX_OPTIONAL_ON_CHAT = True
 
 # You might wish to have your bot respond by being called with certain
 # names, rather than the BOT_PREFIX above. This option allows you to
 # specify alternative prefixes the bot will respond to in addition to
 # the prefix above.
-#BOT_ALT_PREFIXES = ('Err',)
+#BOT_ALT_PREFIXES = ('@garak',)
 
 # If you use alternative prefixes, you might want to allow users to insert
 # separators like , and ; between the prefix and the command itself. This

@@ -8,11 +8,6 @@ import logging
 class GarakBot(BotPlugin):
     """
     Obsidian Order Chat Robot
-    Store items transparently via mixin:
-    self[title] = poll
-    del self[title]
-    List items:
-    self.keys()
     """
     def __init__(self, quote_data_src=None):
         super(GarakBot, self).__init__()
@@ -21,19 +16,22 @@ class GarakBot(BotPlugin):
 
     @botcmd
     def hello(self, msg, args):
-        """Say hello to the world"""
+        """Just Say Hello"""
         return "Hello. You're a killer, admit it. We both are.However, I'm also a very *good* tailor."
 
     @botcmd
     def number_44(self, msg, args):
+        """Call My Number. Am I next?"""
         return "WHOOOO! 44 THAT'S ME!! GETTING SOME COLD CUTS TODAY!!"
 
     @botcmd
     def spock(self, msg, args):
+        """Give a tribute to a dear friend and leader"""
         return "Live Long and Prosper. - R.I.P Mr. Spock"
 
     @botcmd(template="quote")
     def tellme_something(self, msg, args):
+        """Make Idle Chit Chat"""
         quote_store = self.get_garak_quote_datasource()
         if quote_store is None:
             return {"quote":"I'm Sorry, I have nothing to say. For now.", "attr":"Garak"}

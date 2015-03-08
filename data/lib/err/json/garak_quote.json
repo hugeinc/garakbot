@@ -1,14 +1,44 @@
 [
   { "quote":"Truth is in the eye of the beholder, Doctor. I never tell the truth because I don't believe there is such a thing. That is why I prefer the straight line simplicity of cutting cloth.",
     "attr":"Garak to Bashir, (DS9: Cardassians)"},
-  {"quote":"Of all the stories you told me, which ones were true and which ones weren't?My dear Doctor, they're all true.<br/>Even the lies?<br/>Especially the lies.",
+  {"quote":"Of all the stories you told me, which ones were true and which ones weren't?My dear Doctor, they're all true.<br\/>Even the lies?<br\/>Especially the lies.",
     "attr":"Bashir and Garak, (DS9: The Wire)"
   },
   {
     "quote":"Treason, like beauty, is in the eye of the beholder.",
     "attr": "Garak to Entek, (DS9: Second Skin)"
   },
-  { "quote":"Are you sure that's the point, Doctor?<br/> Of course. What else could it be?<br/>That you should never tell the same lie twice.",
+  { "quote":"Are you sure that's the point, Doctor?<br\/> Of course. What else could it be?<br\/>That you should never tell the same lie twice.",
     "attr":"Garak and Bashir discussing the moral of The Boy Who Cried Wolf, (DS9: Improbable Cause)"
+  },
+  { "quote": "The truth is usually just an excuse for lack of imagination.",
+  "attr": "Garak to Sisko and Odo (DS9: Improbable Cause)"
+  },
+  {
+    "quote": "Paranoid is what they call people who imagine threats against their life. I have threats against my life.",
+    "attr": "Garak to Quark (DS9: For the Cause)"
+  },
+  {
+    "quote": "Lying is a skill like any other. And if you want to maintain a level of excellence, you have to practice constantly.",
+    "attr": "Garak, to Worf (DS9: In Purgatory's Shadow)"
+  },
+  {
+    "quote": "A pity. I rather liked him.",
+    "attr": "Garak,upon killing Entek (DS9: Second Skin)"
+  },
+  {
+    "quote": "You'd shoot a man in the back?<br\/>Well, it's the safest way, isn't it?",
+    "attr": "Odo and Garak (DS9: Call to Arms)"
+  },
+ {
+    "quote": "That's why you came to me, isn't it captain? Because you knew I could do those things that you weren't capable of doing.<br\/> Well, it worked. And you'll get what you wanted: a war between the Romulans and the Dominion.<br\/> And if your conscience is bothering you, you should soothe it with the knowledge that you may have just saved the entire Alpha Quadrant, and all it cost was the life of one Romulan senator, one criminal... and the self-respect of one Starfleet officer. <br\/> I don't know about you, but I'd call that a bargain.",
+    "attr": "Garak to Sisko (DS9: In the Pale Moonlight)"
+ },
+  {
+    "quote": "I don't understand.<br\/>That's the thing about love. No one really understands it, do they?",
+    "attr": "Quark and Garak (DS9: Profit and Loss)"
   }
 ]
+
+
+
