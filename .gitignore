@@ -1,0 +1,13 @@
+/plugins/__pycache__/
+/plugins/.coverage
+/htmlcov/
+
+/docs/
+/data/lib/err/err.pid
+/data/lib/err/core.db
+/data/__pycache__/
+/.DS_Store
+/.coverage
+
+/data/log/
+/data/lib/err/plugins/
