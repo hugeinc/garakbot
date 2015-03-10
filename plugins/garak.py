@@ -65,4 +65,3 @@ class GarakBot(BotPlugin):
             except (IOError, ValueError):
                 logging.error("Error Loading JSON value form file")
         return None
-

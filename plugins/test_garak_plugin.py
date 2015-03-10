@@ -17,6 +17,10 @@ config_module.GARAK_QUOTE_DATA = '.'
 sys.modules['config'] = config_module
 from garak import GarakBot
 
+#TO EXECUTE:
+# python -m pytest  -v --cov-report term-missing --cov garak
+# python -m pytest  -v --cov-report html --cov garak
+
 
 class TestGarakPlugin(FullStackTest):
     extra_plugin_dir = '.'
