@@ -1,4 +1,4 @@
-from errbot import BotPlugin, botcmd
+from errbot import BotPlugin, botcmd, webhook
 import os, json
 from random import choice
 from io import StringIO
@@ -65,3 +65,7 @@ class GarakBot(BotPlugin):
             except (IOError, ValueError):
                 logging.error("Error Loading JSON value form file")
         return None
+
+    @webhook('r/spock/')
+    def spock_hook(self, request):
+        return "Hello" #self.spock()

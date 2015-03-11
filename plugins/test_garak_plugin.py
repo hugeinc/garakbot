@@ -2,6 +2,7 @@ import os
 import sys
 import logging
 import json
+
 from io import StringIO
 from errbot.backends.test import push_message, pop_message, FullStackTest
 from errbot.plugin_manager import get_plugin_obj_by_name
@@ -17,13 +18,13 @@ config_module.GARAK_QUOTE_DATA = '.'
 sys.modules['config'] = config_module
 from garak import GarakBot
 
+EXTRA_PLUGIN_DIR = "."
 #TO EXECUTE:
 # python -m pytest  -v --cov-report term-missing --cov garak
 # python -m pytest  -v --cov-report html --cov garak
 
 
-class TestGarakPlugin(FullStackTest):
-    extra_plugin_dir = '.'
+class TestGarakPluginCommands(FullStackTest):
     random_quotes = [{"quote": "First Quote!", "attr": "Garak Said That 1 Time(s)"},
                      {"quote": "Second Quote!", "attr": "Garak Said That 2 Time(s)"},
                      {"quote": "Third Quote!", "attr": "Garak Said That 3 Time(s)"},
@@ -34,7 +35,7 @@ class TestGarakPlugin(FullStackTest):
     random_quotes2 = [k for k in random_quotes if k["quote"].startswith('F')]
 
     def setUp(self, extra_plugin_dir=None, extra_test_file=None, loglevel=logging.DEBUG):
-        super(TestGarakPlugin, self).setUp(extra_plugin_dir=self.extra_plugin_dir, extra_test_file=extra_test_file,
+        super(TestGarakPluginCommands, self).setUp(extra_plugin_dir=EXTRA_PLUGIN_DIR, extra_test_file=extra_test_file,
                                            loglevel=loglevel)
 
     def test_plugin_has_methods(self):
