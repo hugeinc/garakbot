@@ -32,6 +32,6 @@ case "$1" in
             stop_errd
             ;;
         *)
-            echo $"Usage: $0 {start_err|start_errd}"
+            echo $"Usage: $0 {start_err|start_errd|stop_errd}"
             exit 1
 esac
