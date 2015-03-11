@@ -91,7 +91,7 @@ BOT_ADMINS = ('55302_770177@chat.hipchat.com',)
 # should include the # sign here. For XMPP rooms that are password
 # protected, you can specify another tuple here instead of a string,
 # using the format (RoomName, Password).
-CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com',)
+CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com','55302_theobsidianroom@conf.hipchat.com')
 
 # The FullName, or nickname, your bot should use. What you set here will
 # be the nickname that Err shows in chatrooms. Note that some XMPP
