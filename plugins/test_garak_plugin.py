@@ -2,13 +2,15 @@ import os
 import sys
 import logging
 import json
-
 from io import StringIO
+
 from errbot.backends.test import push_message, pop_message, FullStackTest
 from errbot.plugin_manager import get_plugin_obj_by_name
 
+
 config_module = sys.modules['errbot.config-template']
-from tempfile import mkdtemp,NamedTemporaryFile
+from tempfile import mkdtemp, NamedTemporaryFile
+
 tempdir = mkdtemp(prefix='/tmp/')
 config_module.BOT_DATA_DIR = tempdir
 config_module.BOT_LOG_FILE = tempdir + os.sep + 'log.txt'
@@ -16,10 +18,9 @@ config_module.BOT_EXTRA_PLUGIN_DIR = []
 config_module.BOT_LOG_LEVEL = logging.DEBUG
 config_module.GARAK_QUOTE_DATA = '.'
 sys.modules['config'] = config_module
-from garak import GarakBot
 
 EXTRA_PLUGIN_DIR = "."
-#TO EXECUTE:
+# TO EXECUTE:
 # python -m pytest  -v --cov-report term-missing --cov garak
 # python -m pytest  -v --cov-report html --cov garak
 
@@ -36,7 +37,7 @@ class TestGarakPluginCommands(FullStackTest):
 
     def setUp(self, extra_plugin_dir=None, extra_test_file=None, loglevel=logging.DEBUG):
         super(TestGarakPluginCommands, self).setUp(extra_plugin_dir=EXTRA_PLUGIN_DIR, extra_test_file=extra_test_file,
-                                           loglevel=loglevel)
+                                                   loglevel=loglevel)
 
     def test_plugin_has_methods(self):
         self.assertCommandFound('! hello')
@@ -103,7 +104,7 @@ class TestGarakPluginCommands(FullStackTest):
         quote_data = p.load_data_sources()
         assert quote_data is None
 
-    #Functional TEST
+    # Functional TEST
     def test_load_data_sources_loads_DiskFile_correctly(self):
         p = get_plugin_obj_by_name('GarakBot')
         file = NamedTemporaryFile(dir=tempdir, suffix='.json')

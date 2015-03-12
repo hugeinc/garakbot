@@ -9,6 +9,8 @@ class GarakBot(BotPlugin):
     """
     Obsidian Order Chat Robot
     """
+    min_err_version = "2.1.0"
+
     def __init__(self, quote_data_src=None):
         super(GarakBot, self).__init__()
         self.garak_quote_ds = quote_data_src or os.path.abspath(GARAK_QUOTE_DATA)
@@ -66,6 +68,6 @@ class GarakBot(BotPlugin):
                 logging.error("Error Loading JSON value form file")
         return None
 
-    @webhook('r/spock/')
+    @webhook(r'/spock/')
     def spock_hook(self, request):
-        return "Hello" #self.spock()
+        return self.spock(None, None)

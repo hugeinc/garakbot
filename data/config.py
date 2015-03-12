@@ -76,7 +76,7 @@ BOT_IDENTITY = {
 
     ## Group admins can create/view tokens on the settings page after logging
     ## in on HipChat's website
-     'token' : '7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK',
+     'token': '7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK',
 }
 
 # Set the admins of your bot. Only these users will have access
@@ -90,8 +90,8 @@ BOT_ADMINS = ('55302_770177@chat.hipchat.com',)
 # Chatrooms your bot should join on startup. For the IRC backend you 
 # should include the # sign here. For XMPP rooms that are password
 # protected, you can specify another tuple here instead of a string,
-# using the format (RoomName, Password).
-CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com','55302_theobsidianroom@conf.hipchat.com')
+# using the format (RoomName, Password). '55302_theobsidianroom@conf.hipchat.com'
+CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com',)
 
 # The FullName, or nickname, your bot should use. What you set here will
 # be the nickname that Err shows in chatrooms. Note that some XMPP

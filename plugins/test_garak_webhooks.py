@@ -1,17 +1,16 @@
 import os
 import sys
 import logging
-import json
-from io import StringIO
 from time import sleep
-import requests
 import socket
-import pytest
-from errbot.backends.test import push_message, pop_message, FullStackTest, testbot
-from errbot.plugin_manager import get_plugin_obj_by_name
+
+import requests
+from errbot.backends.test import push_message, pop_message, FullStackTest
+
 
 config_module = sys.modules['errbot.config-template']
-from tempfile import mkdtemp,NamedTemporaryFile
+from tempfile import mkdtemp
+
 tempdir = mkdtemp(prefix='/tmp/')
 config_module.BOT_DATA_DIR = tempdir
 config_module.BOT_LOG_FILE = tempdir + os.sep + 'log.txt'
@@ -19,7 +18,6 @@ config_module.BOT_EXTRA_PLUGIN_DIR = []
 config_module.BOT_LOG_LEVEL = logging.DEBUG
 config_module.GARAK_QUOTE_DATA = '.'
 sys.modules['config'] = config_module
-from garak import GarakBot
 
 # Webserver port is picked based on the process ID so that when tests
 # are run in parallel with pytest-xdist, each process runs the server
@@ -43,9 +41,8 @@ def webserver_ready(host, port):
 
 class TestGarakPluginWebHooks(FullStackTest):
     def setUp(self, extra_plugin_dir=None, extra_test_file=None, loglevel=logging.DEBUG):
-
         super(TestGarakPluginWebHooks, self).setUp(extra_plugin_dir=EXTRA_PLUGIN_DIR, extra_test_file=extra_test_file,
-                                           loglevel=loglevel)
+                                                   loglevel=loglevel)
         push_message("!config Webserver {{'HOST': 'localhost', 'PORT': {}, 'SSL':  None}}".format(WEBSERVER_PORT))
         pop_message()
         while not webserver_ready('localhost', WEBSERVER_PORT):
@@ -65,7 +62,7 @@ class TestGarakPluginWebHooks(FullStackTest):
         ).status_code == 404
 
     def test_webhook_spock_returns_expected_output(self):
-        response=requests.post(
+        response = requests.post(
             'http://localhost:{}/spock'.format(WEBSERVER_PORT),
             data=None
         ).text
