@@ -19,7 +19,6 @@ pyasn1==0.1.7
 pycparser==2.10
 pycrypto==2.6.1
 pyOpenSSL==0.14
-PySide==1.2.2
 pytest==2.6.4
 pytest-cov==1.8.1
 requests==2.5.3

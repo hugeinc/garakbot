@@ -61,11 +61,11 @@ class TestGarakPluginWebHooks(FullStackTest):
             "{'toto': 'titui'}"
         ).status_code == 404
 
-    def test_webhook_spock_returns_expected_output(self):
+    def test_webhook_spock_returns_expected_string(self):
         response = requests.post(
-            'http://localhost:{}/spock'.format(WEBSERVER_PORT),
+            'http://localhost:{}/spock/'.format(WEBSERVER_PORT),
             data=None
         ).text
         print(response)
-        self.assertEquals(response, "Hello")
+        self.assertEquals(response, "Live Long and Prosper. - R.I.P Mr. Spock")
 

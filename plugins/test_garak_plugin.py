@@ -18,6 +18,7 @@ config_module.BOT_EXTRA_PLUGIN_DIR = []
 config_module.BOT_LOG_LEVEL = logging.DEBUG
 config_module.GARAK_QUOTE_DATA = '.'
 sys.modules['config'] = config_module
+from garak import GarakBot
 
 EXTRA_PLUGIN_DIR = "."
 # TO EXECUTE:
@@ -45,20 +46,20 @@ class TestGarakPluginCommands(FullStackTest):
         self.assertCommandFound('! spock')
         self.assertCommandFound('! tellme_something')
 
-    def test_mycommand_hello_returns_expected_output(self):
+    def test_mycommand_hello_returns_expected_string(self):
         push_message('! hello')
         self.assertEqual("Hello. You're a killer, admit it. We both are.However, I'm also a very *good* tailor.",
                          pop_message())
 
-    def test_mycommand_number44_returns_expected_output(self):
+    def test_mycommand_number44_returns_expected_string(self):
         push_message('! number 44')
         self.assertEqual("WHOOOO! 44 THAT'S ME!! GETTING SOME COLD CUTS TODAY!!", pop_message())
 
-    def test_mycommand_spock_returns_expected_output(self):
+    def test_mycommand_spock_returns_expected_string(self):
         push_message('! spock')
         self.assertEqual("Live Long and Prosper. - R.I.P Mr. Spock", pop_message())
 
-    def test_mycommand_tellme_something_returns_expected_output(self):
+    def test_mycommand_tellme_something_returns_expected_html(self):
         p = get_plugin_obj_by_name('GarakBot')
         fp = StringIO(json.dumps(self.random_quotes))
         p.garak_quote_ds = fp
@@ -72,7 +73,7 @@ class TestGarakPluginCommands(FullStackTest):
         p.clear_garak_quote_datasource()
         self.assertCommand('! tellme something', "I'm Sorry, I have nothing to say. For now.")
 
-    def test_mycommand_tellme_something_returns_random_output(self):
+    def test_mycommand_tellme_something_returns_random_html(self):
         p = get_plugin_obj_by_name('GarakBot')
         fp = StringIO(json.dumps(self.random_quotes2))
         p.garak_quote_ds = fp
