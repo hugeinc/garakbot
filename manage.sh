@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 PID_FILE='./data/lib/err/err.pid'
 
 start_err() {
@@ -15,7 +15,10 @@ stop_errd(){
       kill -9 $(cat ${PID_FILE})
 }
 
-
+start_err_remote(){
+    source /srv/www/garak/current/venv/bin/activate
+    err.py -c data/
+}
 
 case "$1" in
         start_err)
@@ -30,6 +33,10 @@ case "$1" in
         stop_errd)
             echo Terminating Garak Bot daemon.
             stop_errd
+            ;;
+        start_err_remote)
+            echo Starting Garak Bot On Server.
+            start_err_remote
             ;;
         *)
             echo $"Usage: $0 {start_err|start_errd|stop_errd}"
