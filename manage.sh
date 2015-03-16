@@ -16,8 +16,9 @@ stop_errd(){
 }
 
 start_err_remote(){
-    source /srv/www/garak/current/venv/bin/activate
-    err.py -c data/
+    cd /srv/www/garak/current
+    source /srv/www/garak/current/venv/garak/bin/activate
+    err.py -c data/ -d
 }
 
 case "$1" in
