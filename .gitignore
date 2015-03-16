@@ -12,3 +12,5 @@
 /data/lib/err/plugins/
 
 /data/lib/err/.DS_Store
+
+/data/lib/err/core.db
