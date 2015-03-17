@@ -37,8 +37,8 @@ GARAK_QUOTE_DATA = os.path.abspath(BOT_DATA_DIR+os.sep+'json'+os.sep+'garak_quot
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = os.path.abspath(os.pardir + os.sep + 'garak' + os.sep + 'plugins')
-
+BOT_EXTRA_PLUGIN_DIR = os.path.abspath(os.path.join(GARAK_BASE, os.pardir) + os.sep + 'plugins')
+print(BOT_EXTRA_PLUGIN_DIR)
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
 BOT_LOG_FILE = '%s/log/err/err.log' % GARAK_BASE
