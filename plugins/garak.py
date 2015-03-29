@@ -1,5 +1,6 @@
 from errbot import BotPlugin, botcmd, webhook
-import os, json
+from errbot.plugin_manager import get_plugin_obj_by_name
+import os,json
 from random import choice
 from io import StringIO
 from config import GARAK_QUOTE_DATA
