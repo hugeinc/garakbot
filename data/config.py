@@ -71,12 +71,12 @@ BOT_ASYNC = True
 BOT_IDENTITY = {
 
     ## HipChat mode (Comment the above if using this mode)
-     'username' : '55302_1824349@chat.hipchat.com',
-     'password' : 'Kvwn99YFeKHreE',
+     'username' : '',
+     'password' : '',
 
     ## Group admins can create/view tokens on the settings page after logging
     ## in on HipChat's website
-     'token' : '7T6EAuUleLIqTK9fm6M2Mj6zXXUlazVMkljxUTCK',
+     'token' : '',
 }
 
 # Set the admins of your bot. Only these users will have access
@@ -85,13 +85,13 @@ BOT_IDENTITY = {
 # Note: With campfire this should be the full name of a person, like so: 
 # BOT_ADMINS = ('Guillaume Binet',)
 #
-BOT_ADMINS = ('55302_770177@chat.hipchat.com',)
+BOT_ADMINS = ('[EDIT]@chat.hipchat.com',)
 
 # Chatrooms your bot should join on startup. For the IRC backend you 
 # should include the # sign here. For XMPP rooms that are password
 # protected, you can specify another tuple here instead of a string,
 # using the format (RoomName, Password).
-CHATROOM_PRESENCE = ('55302_cardassiaprime@conf.hipchat.com',)
+CHATROOM_PRESENCE = ('[EDIT]@conf.hipchat.com',)
 
 # The FullName, or nickname, your bot should use. What you set here will
 # be the nickname that Err shows in chatrooms. Note that some XMPP
